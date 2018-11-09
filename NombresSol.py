@@ -1,3 +1,4 @@
+#Importo numpy para ver la lista mejor al final; no se necesita para la respuesta final.
 import numpy as np
 nombres = [
     'María del Rosario Estupiñan Hernández',
