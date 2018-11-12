@@ -1,0 +1,17 @@
+import urllib.request, json 
+import numpy as np
+import requests
+
+#First part, load Json and print title.
+JsonFile=requests.get("https://jsonplaceholder.typicode.com/posts/")
+posts=json.loads(JsonFile.text)
+for post in posts:
+    print(post['title'])
+    
+#Second part, load each individual post and print each title. 
+Link="https://jsonplaceholder.typicode.com/posts/"
+n=[x+1 for x in range(100)]
+for number in n:
+    JsonFile=requests.get(Link+str(number))
+    Post=json.loads(JsonFile.text)
+    print(Post['title'])
